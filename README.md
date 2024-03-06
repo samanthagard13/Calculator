@@ -6,7 +6,7 @@
 
  This is a simple calculator made using HTML CSS and Javascript.
 
- ![Visit the site here](https://mini-calculator-seven.vercel.app/)
+ [Visit the site here](https://mini-calculator-seven.vercel.app/)
 
   ## License
 
