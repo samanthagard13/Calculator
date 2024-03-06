@@ -17,42 +17,81 @@
   <body>
     <div class="container d-flex justify-content-center">
       <div class="card shadow-lg calc">
-        <input type="text" class="input form-control" id="result" readonly>
+        <input type="text" class="input form-control" id="result" readonly />
         <div class="buttons">
-        <div class="row">
-          <button  onclick="appendNumber('7')" class="col btn btn-light">7</button>
-          <button  onclick="appendNumber('8')" class="col btn btn-light">8</button>
-          <button  onclick="appendNumber('9')" class="col btn btn-light">9</button>
-          <button  onclick="setOperator('/')" class="col btn btn-light">/</button>
+          <div class="row">
+            <button onclick="appendNumber('7')" class="col btn btn-light">
+              7
+            </button>
+            <button onclick="appendNumber('8')" class="col btn btn-light">
+              8
+            </button>
+            <button onclick="appendNumber('9')" class="col btn btn-light">
+              9
+            </button>
+            <button onclick="setOperator('/')" class="col btn btn-light">
+              /
+            </button>
+          </div>
+          <div class="row">
+            <button onclick="appendNumber('4')" class="col btn btn-light">
+              4
+            </button>
+            <button onclick="appendNumber('5')" class="col btn btn-light">
+              5
+            </button>
+            <button onclick="appendNumber('6')" class="col btn btn-light">
+              6
+            </button>
+            <button onclick="setOperator('*')" class="col btn btn-light">
+              *
+            </button>
+          </div>
+          <div class="row">
+            <button onclick="appendNumber('1')" class="col btn btn-light">
+              1
+            </button>
+            <button onclick="appendNumber('2')" class="col btn btn-light">
+              2
+            </button>
+            <button onclick="appendNumber('3')" class="col btn btn-light">
+              3
+            </button>
+            <button onclick="setOperator('-')" class="col btn btn-light">
+              -
+            </button>
+          </div>
+          <div class="row">
+            <button onclick="appendNumber('0')" class="col btn btn-light">
+              0
+            </button>
+            <button onclick="appendDecimalPoint()" class="col btn btn-light">
+              .
+            </button>
+            <button onclick="calculateResult()" class="col btn btn-light">
+              =
+            </button>
+            <button onclick="setOperator('+')" class="col btn btn-light">
+              +
+            </button>
+          </div>
+          <div class="row">
+            <button onclick="clearResult()" class="col btn btn-light">C</button>
+            <button onclick="saveResult()" class="col btn btn-light">
+              Save
+            </button>
+          </div>
         </div>
-        <div class="row">
-          <button onclick="appendNumber('4')" class="col btn btn-light">4</button>
-          <button onclick="appendNumber('5')" class="col btn btn-light">5</button>
-          <button onclick="appendNumber('6')" class="col btn btn-light">6</button>
-          <button onclick="setOperator('*')" class="col btn btn-light">*</button>
-        </div>
-        <div class="row">
-          <button onclick="appendNumber('1')" class="col btn btn-light">1</button>
-          <button onclick="appendNumber('2')" class="col btn btn-light">2</button>
-          <button onclick="appendNumber('3')" class="col btn btn-light">3</button>
-          <button onclick="setOperator('-')" class="col btn btn-light">-</button>
-        </div>
-        <div class="row">
-          <button onclick="appendNumber('0')" class="col btn btn-light">0</button>
-          <button onclick="appendDecimalPoint()" class="col btn btn-light">.</button>
-          <button onclick="calculateResult()" class="col btn btn-light">=</button>
-          <button onclick="setOperator('+')" class="col btn btn-light">+</button>
-        </div>
-        <div class="row">
-          <button onclick="clearResult()" class="col btn btn-light">C</button>
-          <button onclick="saveResult()" class="col btn btn-light">Save</button>
-        </div>
-    </div>
       </div>
     </div>
-    <div class="container d-flex justify-content-center" hidden>
-      <div class="card shadow-lg results-container">
-        <div class="p-3" id="savedResults"></div>
+
+    <div class="saved-results-container" id="savedResults"></div>
+
+    <div class="container d-flex justify-content-center">
+      <div class="card shadow-lg clear-button">
+        <button onclick="clearSaveResults()" class="col btn btn-light">
+          Clear
+        </button>
       </div>
     </div>
 

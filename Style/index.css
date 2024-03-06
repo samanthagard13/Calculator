@@ -1,9 +1,5 @@
 body {
-    background-color: rgb(228, 235, 235);
-}
-
-.container {
-    margin-top: 5em;
+    background-color: rgb(210, 223, 223);
 }
 
 .calc {
@@ -28,6 +24,17 @@ button {
     margin: 10px;
 }
 
-.results-container {
-    
+.saved-results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    margin-top: 1.5em;
+}
+
+.clear-button {
+    border: none;
+    margin-top: 0px;
 }

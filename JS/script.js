@@ -67,20 +67,34 @@ function updateResult() {
 
 let savedResults = [];
 
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('savedResults')) {
+        savedResults = JSON.parse(localStorage.getItem('savedResults'));
+        updateSavedResults();
+    }
+});
+
 function saveResult() {
     if (currentInput !== "") {
         savedResults.push(currentInput);
         updateSavedResults();
+        localStorage.setItem('savedResults', JSON.stringify(savedResults));
     }
 }
 
 function updateSavedResults() {
     const savedResultsContainer = document.getElementById('savedResults');
-    savedResultsContainer.innerHTML = ""; 
+    savedResultsContainer.innerHTML = "";
 
     savedResults.forEach((result, index) => {
         const resultElement = document.createElement('div');
-        resultElement.textContent = `Result ${index + 1}: ${result}`;
+        resultElement.textContent = `\u2022 ${result} \u2022`;
         savedResultsContainer.appendChild(resultElement);
     });
+}
+
+function clearSaveResults() {
+    savedResults = [];
+    updateSavedResults();
+    localStorage.removeItem('savedResults');
 }
