@@ -8,6 +8,8 @@
 
  [Visit the site here](https://mini-calculator-seven.vercel.app/)
 
+ ![Screenshot](/Images/screenshot.png)
+
   ## License
 
   MIT License
